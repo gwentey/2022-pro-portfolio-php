@@ -1,10 +1,15 @@
-<!doctype php>
-<php lang="en">
+<!doctype html>
+<html lang="fr">
 
-	<?php
+<?php
 	include 'inc/menu.php';
+	include 'config/functions.php';
 
-	?>
+	$projets = getAllProjetIndex();
+?>
+
+
+
 	<!--================Home Banner Area =================-->
 	<section class="home_banner_area">
 		<div class="container box_1620">
@@ -293,78 +298,23 @@
 		</div>
 		<div class="container">
 			<div class="gallery_f_inner row imageGallery1">
-				<div class="col-lg-4 col-md-4 col-sm-6 php symfony autres print">
-					<div class="h_gallery_item">
-						<div class="g_img_item">
-							<img class="img-fluid" src="img/gallery/1.png" alt="">
-							<a class="light" href="img/gallery/1.png"><img src="img/gallery/icon.png" alt=""></a>
-						</div>
-						<div class="g_item_text">
-							<h4>3D Helmet autres</h4>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 php symfony angular">
-					<div class="h_gallery_item">
-						<div class="g_img_item">
-							<img class="img-fluid" src="img/gallery/2.png" alt="">
-							<a class="light" href="img/gallery/2.png"><img src="img/gallery/icon.png" alt=""></a>
-						</div>
-						<div class="g_item_text">
-							<h4>2D Vinyl autres</h4>
-							<p>Client Project</p>
+
+				<?php foreach ($projets as $projet) { ?>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 <?= getLanguageByProjet($projet->id) ?>">
+						<div class="h_gallery_item">
+							<div class="g_img_item">
+								<img class="img-fluid" src="<?= $projet->image ?>" alt="">
+								<a class="light" href="img/img-projet/1.png"><img src="img/img-projet/icon.png" alt=""></a>
+							</div>
+							<div class="g_item_text">
+								<h4><?= $projet->nom ?></h4>
+								<p><?= $projet->categorie ?></p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 symfony angular autres print">
-					<div class="h_gallery_item">
-						<div class="g_img_item">
-							<img class="img-fluid" src="img/gallery/3.png" alt="">
-							<a class="light" href="img/gallery/3.png"><img src="img/gallery/icon.png" alt=""></a>
-						</div>
-						<div class="g_item_text">
-							<h4>angular Poster autres</h4>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 php angular print">
-					<div class="h_gallery_item">
-						<div class="g_img_item">
-							<img class="img-fluid" src="img/gallery/4.png" alt="">
-							<a class="light" href="img/gallery/4.png"><img src="img/gallery/icon.png" alt=""></a>
-						</div>
-						<div class="g_item_text">
-							<h4>Embosed Logo autres</h4>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 php symfony autres">
-					<div class="h_gallery_item">
-						<div class="g_img_item">
-							<img class="img-fluid" src="img/gallery/5.png" alt="">
-							<a class="light" href="img/gallery/5.png"><img src="img/gallery/icon.png" alt=""></a>
-						</div>
-						<div class="g_item_text">
-							<h4>3D Disposable Bottle</h4>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 php angular">
-					<div class="h_gallery_item">
-						<div class="g_img_item">
-							<img class="img-fluid" src="img/gallery/6.png" alt="">
-							<a class="light" href="img/gallery/6.png"><img src="img/gallery/icon.png" alt=""></a>
-						</div>
-						<div class="g_item_text">
-							<h4>3D Logo autres</h4>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
+
+				<?php } ?>
 
 
 			</div>
@@ -373,51 +323,7 @@
 			</div>
 		</div>
 	</section>
-	<!--================End Home Gallery Area =================-->
 
-	<!--================Footer Area =================-->
-	<footer class="footer_area p_70">
-		<div class="container" align="center">
+     <?php include 'inc/footer.php'; ?>
 
-
-			<aside class="f_widget social_widget">
-				<div class="f_title">
-					<h3>Me suivre</h3>
-				</div>
-				<p>Soyons sociaux</p>
-				<ul class="list">
-					<li><a href="https://github.com/gwentey"><i class="fa fa-github"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/anthony-rodrigues-dev/"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://stackoverflow.com/users/12607495/anthony-rodrigues"><i class="fa fa-stack-overflow"></i></a></li>
-				</ul>
-			</aside>
-		</div>
-
-	</footer>
-	<!--================End Footer Area =================-->
-
-
-
-
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<script src="js/theme.js"></script>
-	</body>
-
-</php>
+</html>
