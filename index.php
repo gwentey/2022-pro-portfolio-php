@@ -304,8 +304,8 @@
 					<div class="col-lg-4 col-md-4 col-sm-6 <?= getLanguageByProjet($projet->id) ?>">
 						<div class="h_gallery_item">
 							<div class="g_img_item">
-								<img class="img-fluid" src="<?= $projet->image ?>" alt="">
-								<a class="light" href="img/img-projet/1.png"><img src="img/img-projet/icon.png" alt=""></a>
+								<img class="img-fluid" src="<?= $projet->image ?>" width="340px" height="339px" alt="">
+								<a class="light" href="./detail-projet.php?id=<?= $projet->id ?>"><img src="img/img-projet/icon.png" alt=""></a>
 							</div>
 							<div class="g_item_text">
 								<h4><?= $projet->nom ?></h4>

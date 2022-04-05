@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>Projet <?= $projet->nom ?></h2>
+                    <h2><?= $projet->nom ?></h2>
                     <div class="page_link">
                         <a href="index.php">Accueil</a>
                         <a href="projets.php">Projet </a>
@@ -40,7 +40,7 @@ if (isset($_GET['id'])) {
                 <div class="single-post row">
                     <div class="col-lg-12">
                         <div class="feature-img">
-                            <img class="img-fluid" src="img/blog/karate.png" alt="">
+                            <img class="img-fluid" src="img/blog/karate.png" width="1140px" height="350px" alt="">
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3">

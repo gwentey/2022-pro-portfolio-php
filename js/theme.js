@@ -20,7 +20,7 @@
             });
         };
     };
-    navbarFixed();
+/*     navbarFixed(); */
 	
 	
 	/*----------------------------------------------------*/
@@ -29,7 +29,7 @@
 	function parallaxEffect() {
     	$('.bg-parallax').parallax();
 	}
-	parallaxEffect();
+/* 	parallaxEffect(); */
 	
 	
 //	$('.courses_area').imagesLoaded(function(){

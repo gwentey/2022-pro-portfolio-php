@@ -41,7 +41,7 @@ function getProjetById($id)
     return $result;
 }
 
-function getLanguageByProjet($id_projet, $returnArray = 0)
+function getLanguageByProjet($id_projet)
 {
     $bd = bdd();
 
@@ -53,15 +53,11 @@ function getLanguageByProjet($id_projet, $returnArray = 0)
     $getLanguageByProjet->execute(array($id_projet));
     $result = $getLanguageByProjet->fetchAll(PDO::FETCH_OBJ);
 
-    if ($returnArray == 0) {
         $resulat = "";
         foreach ($result as $res) {
             $resulat = $res->nom . " " . $resulat;
         }
-    } else {
-        $resultat = $result;
-    }
 
 
-    return $resultat;
+    return $resulat;
 }
