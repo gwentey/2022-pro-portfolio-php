@@ -20,7 +20,7 @@
             });
         };
     };
-/*     navbarFixed(); */
+    navbarFixed();
 	
 	
 	/*----------------------------------------------------*/
@@ -29,7 +29,7 @@
 	function parallaxEffect() {
     	$('.bg-parallax').parallax();
 	}
-/* 	parallaxEffect(); */
+	parallaxEffect();
 	
 	
 //	$('.courses_area').imagesLoaded(function(){
@@ -108,8 +108,8 @@
 	/*----------------------------------------------------*/
     /*  Simple LightBox js
     /*----------------------------------------------------*/
-    $('.imageGallery1 .light').simpleLightbox();
-	
+/*     $('.imageGallery1 .light').simpleLightbox();
+ */	
 	$('.counter').counterUp({
 		delay: 10,
 		time: 1000

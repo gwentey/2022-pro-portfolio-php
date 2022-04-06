@@ -47,7 +47,7 @@ include 'inc/menu.php';
                 </div>
             </div>
             <div class="col-lg-9">
-                <form class="row needs-validation" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                <form class="row needs-validation" action="contact_process.php" method="post" id="contactForm" novalidate>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrer votre nom" required>
@@ -64,7 +64,7 @@ include 'inc/menu.php';
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <textarea class="form-control" style="height: 144px;" name="message" id="message" rows="1" placeholder="Votre Message" required ></textarea>
+                            <textarea class="form-control" style="height: 144px;" name="message" id="message" rows="1" placeholder="Votre Message" required></textarea>
                             <div class="invalid-feedback"></div>
                         </div>
                     </div>
@@ -76,6 +76,11 @@ include 'inc/menu.php';
         </div>
     </div>
 </section>
+<scrip src="js/validator.js"></script>
+
 <?php include 'inc/footer.php'; ?>
+<script>
+
+</script>
 
 </html>

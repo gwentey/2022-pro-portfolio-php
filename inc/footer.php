@@ -21,7 +21,7 @@
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/stellar.js"></script>
-	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="js/validators.js"></script>
 	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
 	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
 	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
@@ -32,6 +32,5 @@
 	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/theme.js"></script>
-	<script src="js/validator.js"></script>
 
 	</body>

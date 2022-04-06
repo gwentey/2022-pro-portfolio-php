@@ -146,9 +146,9 @@
 						<ul class="list">
 							<li>
 								<span></span>
-								<div class="media" style="width:700px">
+								<div class="media mediamodif">
 									<div class="d-flex">
-										<p style="margin-left: 25px;">2022, 7 semaines</p>
+										<p>2022, 7 semaines</p>
 									</div>
 									<div class="media-body">
 										<h4>STAGE SADEM GROUP</h4>
@@ -162,9 +162,9 @@
 							</li>
 							<li>
 								<span></span>
-								<div class="media" style="width:700px">
+								<div class="media mediamodif">
 									<div class="d-flex">
-										<p style="margin-left: 25px;">2021, 5 semaines</p>
+										<p >2021, 5 semaines</p>
 									</div>
 									<div class="media-body">
 										<h4>STAGE LYCEE HOTELIER : Jean Monnet</h4>
@@ -177,9 +177,9 @@
 							</li>
 							<li>
 								<span></span>
-								<div class="media" style="width:700px">
+								<div class="media mediamodif">
 									<div class="d-flex">
-										<p style="margin-left: 32px;">2021, Saisonnier</p>
+										<p>2021, Saisonnier</p>
 									</div>
 									<div class="media-body">
 										<h4>DECATHLON : Vendeur Sportif</h4>
@@ -196,9 +196,9 @@
 						<ul class="list">
 							<li>
 								<span></span>
-								<div class="media" style="width:700px">
+								<div class="media mediamodif">
 									<div class="d-flex">
-										<p style="margin-left: 76px;">2020 - 2022</p>
+										<p >2020 - 2022</p>
 									</div>
 									<div class="media-body">
 										<h4>BTS SIO SLAM</h4>
@@ -206,7 +206,7 @@
 											Support et mise à disposition des services informatiques<br />
 											Conception et développement d’applications<br />
 											Cybersécurité des services informatiques<br />
-											<br />Lycée Suzanne Valadon<br />
+											Lycée Suzanne Valadon<br />
 											Limoges
 										</p>
 									</div>
@@ -214,9 +214,9 @@
 							</li>
 							<li>
 								<span></span>
-								<div class="media">
+								<div class="media mediamodif">
 									<div class="d-flex">
-										<p style="margin-left: 124px;">2019</p>
+										<p>2019</p>
 									</div>
 									<div class="media-body">
 										<h4>BAC STI2D</h4>
