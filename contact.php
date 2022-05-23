@@ -4,9 +4,21 @@
 
 <?php
 include 'inc/menu.php';
+
+if(isset($_POST['nom']) && isset($_POST['email']) && isset($_POST['sujet'])){
+ini_set( 'display_errors', 1);
+error_reporting( E_ALL );
+$from = "contact@anthony-rodrigues.fr";
+$to ="anthonyoutub@gmail.com";
+$subject = "Reception d'un nouveau formulaire contact : " . $_POST['sujet'];
+$message = "Object : " . $_POST['sujet'] . "<br /> Message : <br />" . $_POST['email'] . "<br /> Nom Expéditeur : "  . $_POST['nom'] . "<br /> Email Expéditeur : " .  $_POST['email'];
+$headers = "De:" . $from;
+mail($to,$subject,$message, $headers);
+echo "envoyé !";
+}
+
 ?>
 
-<!--================Home Banner Area =================-->
 <section class="banner_area">
     <div class="box_1620">
         <div class="banner_inner d-flex align-items-center">
@@ -22,9 +34,7 @@ include 'inc/menu.php';
         </div>
     </div>
 </section>
-<!--================End Home Banner Area =================-->
 
-<!--================Contact Area =================-->
 <section class="contact_area p_120">
     <div class="container">
         <div class="row">
@@ -47,18 +57,18 @@ include 'inc/menu.php';
                 </div>
             </div>
             <div class="col-lg-9">
-                <form class="row needs-validation" action="contact_process.php" method="post" id="contactForm" novalidate>
+                <form class="row needs-validation" action="" method="post" id="" novalidate>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrer votre nom" required>
+                            <input type="text"  value="" class="form-control" id="nom" name="nom" placeholder="Entrer votre nom" required>
                             <div class="invalid-feedback"></div>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter votre email" required>
+                            <input type="email" value="" class="form-control" id="email" name="email" placeholder="Enter votre email" required>
                             <div class="invalid-feedback"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="sujet" name="sujet" placeholder="Sujet" required>
+                            <input type="text" value="" class="form-control" id="sujet" name="sujet" placeholder="Sujet" required>
                             <div class="invalid-feedback"></div>
                         </div>
                     </div>
@@ -76,11 +86,12 @@ include 'inc/menu.php';
         </div>
     </div>
 </section>
-<scrip src="js/validator.js"></script>
+<scrip src="js/validator.js">
+    </script>
 
-<?php include 'inc/footer.php'; ?>
-<script>
+    <?php include 'inc/footer.php'; ?>
+    <script>
 
-</script>
+    </script>
 
 </html>

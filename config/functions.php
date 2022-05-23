@@ -28,6 +28,17 @@ function getAllProjetIndex()
     return $result;
 }
 
+function nombreProjet()
+{
+    $bd = bdd();
+
+    $getAllProjet = $bd->prepare("SELECT * FROM projet");
+
+    $getAllProjet->execute();
+    $result = $getAllProjet->rowCount();
+    return $result;
+}
+
 function getProjetById($id)
 {
 
@@ -53,10 +64,10 @@ function getLanguageByProjet($id_projet)
     $getLanguageByProjet->execute(array($id_projet));
     $result = $getLanguageByProjet->fetchAll(PDO::FETCH_OBJ);
 
-        $resulat = "";
-        foreach ($result as $res) {
-            $resulat = $res->nom . " " . $resulat;
-        }
+    $resulat = "";
+    foreach ($result as $res) {
+        $resulat = $res->nom . " " . $resulat;
+    }
 
 
     return $resulat;

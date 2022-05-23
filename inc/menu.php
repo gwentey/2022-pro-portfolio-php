@@ -37,7 +37,7 @@
 							<li class="nav-item active"><a class="nav-link" href="index.php">Accueil</a></li>
 							<li class="nav-item"><a class="nav-link" href="competences.php">Compétences</a></li>
                             <li class="nav-item"><a class="nav-link" href="projets.php">Projets</a></li>
-                            
+							<li class="nav-item"><a class="nav-link" href="veille-technologique.php">Veille Technologique</a></li>
 							<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 						</ul>
 					</div>

@@ -1,19 +1,24 @@
 <!doctype html>
 <html lang="fr">
 
+
 <?php
 	include 'inc/menu.php';
+	include 'config/functions.php';
+
+	$projets = getAllProjet();
 ?>
+
         <!--================Home Banner Area =================-->
         <section class="banner_area">
             <div class="box_1620">
 				<div class="banner_inner d-flex align-items-center">
 					<div class="container">
 						<div class="banner_content text-center">
-							<h2>Portfolio</h2>
+							<h2>Projets</h2>
 							<div class="page_link">
-								<a href="index.html">Home</a>
-								<a href="portfolio.html">Portfolio</a>
+								<a href="index.php">Accueil</a>
+								<a href="projets.php">Projets</a>
 							</div>
 						</div>
 					</div>
@@ -23,102 +28,48 @@
         <!--================End Home Banner Area =================-->
         
         <!--================Home Gallery Area =================-->
-        <section class="home_gallery_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Our Latest Featured Projects</h2>
-        			<p>Who are in extremely love with eco friendly system.</p>
-        		</div>
-        		<div class="isotope_fillter">
-        			<ul class="gallery_filter list">
-						<li class="active" data-filter="*"><a href="#">All</a></li>
-						<li data-filter=".brand"><a href="#">Vector</a></li>
-						<li data-filter=".manipul"><a href="#">Raster</a></li>
-						<li data-filter=".creative"><a href="#">UI/UX</a></li>
-						<li data-filter=".design"><a href="#">Printing</a></li>
-					</ul>
-        		</div>
-        	</div>
-        	<div class="container">
-        		<div class="gallery_f_inner row imageGallery1">
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/1.png" alt="">
-        						<a class="light" href="img/gallery/1.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>3D Helmet Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/2.png" alt="">
-        						<a class="light" href="img/gallery/2.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>2D Vinyl Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 manipul creative design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/3.png" alt="">
-        						<a class="light" href="img/gallery/3.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Creative Poster Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/4.png" alt="">
-        						<a class="light" href="img/gallery/4.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Embosed Logo Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/5.png" alt="">
-        						<a class="light" href="img/gallery/5.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>3D Disposable Bottle</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/6.png" alt="">
-        						<a class="light" href="img/gallery/6.png"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>3D Logo Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        		<div class="more_btn">
-        			<a class="main_btn" href="#">Load More Items</a>
-        		</div>
-        	</div>
-        </section>
+		<section class="home_gallery_area p_120">
+		<div class="container">
+			<div class="main_title">
+				<h2>MES PROJETS</h2>
+				<p>Vous retrouverez ici tous mes projets professionels, scolaires et personnels que j'ai pu mis
+					en oeuvre.</p>
+			</div>
+			<div class="isotope_fillter">
+				<ul class="gallery_filter list">
+					<li class="active" data-filter="*"><a href="#">Tous</a></li>
+					<li data-filter=".php"><a href="#">PHP</a></li>
+					<li data-filter=".symfony"><a href="#">Symfony</a></li>
+					<li data-filter=".angular"><a href="#">Angular</a></li>
+					<li data-filter=".autres"><a href="#">Autres</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div class="gallery_f_inner row imageGallery1">
+
+				<?php foreach ($projets as $projet) { ?>
+
+					<div class="col-lg-4 col-md-4 col-sm-6 <?= getLanguageByProjet($projet->id) ?>">
+						<div class="h_gallery_item">
+							<div class="g_img_item">
+								<img class="img-fluid" src="img/img-projet/<?= $projet->image ?>" width="340px" height="339px" alt="">
+								<a class="light" href="./detail-projet.php?id=<?= $projet->id ?>"><img src="img/img-projet/icon.png" alt=""></a>
+							</div>
+							<div class="g_item_text">
+								<h4><?= $projet->nom ?></h4>
+								<p><?= $projet->categorie ?></p>
+							</div>
+						</div>
+					</div>
+
+				<?php } ?>
+
+
+			</div>
+
+		</div>
+	</section>
         <!--================End Home Gallery Area =================-->
         
         <?php include 'inc/footer.php'; ?>

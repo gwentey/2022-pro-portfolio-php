@@ -5,7 +5,8 @@
 	include 'inc/menu.php';
 	include 'config/functions.php';
 
-	$projets = getAllProjetIndex();
+	$projets = getAllProjet();
+	$nbProjet = nombreProjet();
 ?>
 
 
@@ -23,7 +24,7 @@
 							<div class="personal_text">
 								<h6>Salut tout le monde, je suis </h6>
 								<h3>Anthony Rodrigues</h3>
-								<h4>Etudiant en BTS SIO</h4>
+								<h4>Etudiant en BTS SIO : DEVELOPPEUR </h4>
 								<p>Passionné par le monde du numérique depuis de nombreuses années, j'ai pour objectif,
 									à moyen terme, de crée ma propre entreprise afin d'aider les entreprises dans leur
 									transition numérique.</p>
@@ -64,7 +65,7 @@
 							<div class="col-md-4">
 								<div class="wel_item">
 									<i class="lnr lnr-book"></i>
-									<h4>8</h4>
+									<h4><?= $nbProjet ?></h4>
 									<p>Projets terminée</p>
 								</div>
 							</div>
@@ -245,7 +246,7 @@
 			<div class="feature_inner row">
 				<div class="col-lg-4 col-md-6">
 					<div class="feature_item">
-						<i class="flaticon-city"></i>
+					<img src="./img/favicon/bloc1.png" style="margin-bottom:5%" width="45px" alt=""></img>
 						<h4>Support et mise à disposition de services informatiques</h4>
 						<p>-Gestion du patrimoine informatique<br />
 							-Répondre aux incidents et aux demandes d’assistance et d’évolution<br />
@@ -254,7 +255,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature_item">
-						<i class="flaticon-sketch"></i>
+					<img src="./img/favicon/bloc2.png" style="margin-bottom:5%" width="45px" alt=""></img>
 						<h4>Conception et développement d’applications</h4>
 						<p>-Programmation orientée objet<br />
 							-Conception d’architectures logicielles<br />
@@ -264,7 +265,7 @@
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="feature_item">
-						<i class="flaticon-skyline"></i>
+					<img src="./img/favicon/bloc3.png" style="margin-bottom:5%" width="45px" alt=""></img>
 						<h4>Sécurisation des services et applications</h4>
 						<p>-Protéger les données à caractère personnel<br />
 							-Préserver l'identité numérique<br />
@@ -299,12 +300,14 @@
 		<div class="container">
 			<div class="gallery_f_inner row imageGallery1">
 
-				<?php foreach ($projets as $projet) { ?>
+				<?php foreach ($projets as $projet) { 
+					if($projet->forindex == 1){
+					?>
 
 					<div class="col-lg-4 col-md-4 col-sm-6 <?= getLanguageByProjet($projet->id) ?>">
 						<div class="h_gallery_item">
 							<div class="g_img_item">
-								<img class="img-fluid" src="<?= $projet->image ?>" width="340px" height="339px" alt="">
+								<img class="img-fluid" src="img/img-projet/<?= $projet->image ?>" width="340px" height="339px" alt="">
 								<a class="light" href="./detail-projet.php?id=<?= $projet->id ?>"><img src="img/img-projet/icon.png" alt=""></a>
 							</div>
 							<div class="g_item_text">
@@ -314,12 +317,12 @@
 						</div>
 					</div>
 
-				<?php } ?>
+				<?php } } ?>
 
 
 			</div>
 			<div class="more_btn">
-				<a class="main_btn" href="portfolio.php">Voir tout les projets</a>
+				<a class="main_btn" href="projets.php">Voir tout les projets</a>
 			</div>
 		</div>
 	</section>

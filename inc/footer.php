@@ -4,9 +4,11 @@
 
 			<aside class="f_widget social_widget">
 				<div class="f_title">
-					<h3>Me suivre</h3>
+					<h3><a style="text-decoration: none; color: white;" href="./mention-legales.php">Mention légales</a></h3>
+					
 				</div>
 				<p>Soyons sociaux</p>
+				
 				<ul class="list">
 					<li><a href="https://github.com/gwentey"><i class="fa fa-github"></i></a></li>
 					<li><a href="https://www.linkedin.com/in/anthony-rodrigues-dev/"><i class="fa fa-linkedin"></i></a></li>
